@@ -1,0 +1,15 @@
+<div>
+  <h3>{{pet.name}}</h3>
+  <p>{{pet.species}}</p>
+  {% if pet.breed %}
+  <p>Breed : {{pet.breed}}</p>
+  {% endif %} {% if pet.age %}
+  <p>Age : {{pet.age}}</p>
+  {% endif %} {% if pet.sex %}
+  <p>Age : {{pet.sex}}</p>
+  {% endif %} {% if pet.description %}
+  <h4>Description</h4>
+  <p><i>{{pet.description}}</i></p>
+  {% endif %}
+  <p>Submission on : {{pet.submission_date }}</p>
+</div>
