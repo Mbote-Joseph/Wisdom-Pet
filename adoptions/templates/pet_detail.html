@@ -1,3 +1,4 @@
+{% extends "base.html" %} {% block content %}
 <div>
   <h3>{{pet.name}}</h3>
   <p>{{pet.species}}</p>
@@ -7,9 +8,17 @@
   <p>Age : {{pet.age}}</p>
   {% endif %} {% if pet.sex %}
   <p>Age : {{pet.sex}}</p>
+  {% endif %} {% if pet.vaccinations.all %}
+  <p>vaccinations for :</p>
+  <ul>
+    {% for vaccination in pet.vaccinations.all %}
+    <li>{{ vaccination.name }}</li>
+    {% endfor %}
+  </ul>
   {% endif %} {% if pet.description %}
   <h4>Description</h4>
   <p><i>{{pet.description}}</i></p>
   {% endif %}
-  <p>Submission on : {{pet.submission_date }}</p>
+  <p>Submission on : {{pet.submission_date | date:"M d Y"}}</p>
 </div>
+{% endblock %}
