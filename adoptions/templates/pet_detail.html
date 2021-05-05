@@ -20,5 +20,7 @@
   <p><i>{{pet.description}}</i></p>
   {% endif %}
   <p>Submission on : {{pet.submission_date | date:"M d Y"}}</p>
+
+  <button><a href="{% url 'home' %}"> Back</a></button>
 </div>
 {% endblock %}
